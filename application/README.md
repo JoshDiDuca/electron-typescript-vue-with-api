@@ -1,4 +1,7 @@
-# electron-vue-typescript-template
+# electron-vue-typescript
+
+[Based on my previous project](https://github.com/JoshDiDuca/electron-vue-typescript).
+
 
 ## Project setup
 ```
