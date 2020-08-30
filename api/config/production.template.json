@@ -1,0 +1,40 @@
+{    
+    "Debug": false,
+    "Host": "localhost",
+    "Port": 3000,
+    "MongoDB": "mongodb://localhost:27017/agenda",
+    "DefaultExchange" : "coinbasepro",
+    "CurrencySymbol" : "BTC/GBP",
+    "Exchanges": [{
+        "coinbasepro": {
+            "apiKey": "",
+            "secret": "",
+            "passphrase": "",
+            "password": "",
+            "proxy": "https://di-duca-cors.herokuapp.com/"
+        }
+    }],
+    "ORM": {
+        "type": "mongodb",
+        "host": "localhost",
+        "database": "trading",
+        "useUnifiedTopology": true,
+        "port": 27017,
+        "logging": false,
+        "entities": [
+            "bin/entity/*.js",
+            "bin/entity/*/*.js"
+        ],
+        "subscribers": [
+            "bin/db/subscriber/*.js"
+        ],
+        "migrations": [
+            "bin/db/migration/*.js"
+        ],
+        "cli": {
+            "entitiesDir": "bin/entity",
+            "migrationsDir": "bin/db/migration",
+            "subscribersDir": "bin/db/subscriber"
+        }
+    }
+}

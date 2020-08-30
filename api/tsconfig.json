@@ -1,0 +1,21 @@
+{
+  "version": "3.3.3333",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "lib": [ "es5", "es6" ],
+    "module": "commonjs",
+    "outDir": "./bin/",
+    "target": "es6"
+  },
+  "services/*": ["services/*"],
+  "entity/*": ["services/*"],
+  "exclude": [
+    "node_modules"
+  ]
+}
