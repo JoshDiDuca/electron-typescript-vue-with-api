@@ -9,5 +9,5 @@ import { LogService, ILogService } from './log/LogService'
 export function RegisterServices(iocContainer: interfaces.Container): void {
 	iocContainer.bind<ILogService>('LogService').to(LogService)
 
-	iocContainer.bind<ITodoService>('TradesService').to(TodoService)
+	iocContainer.bind<ITodoService>('TodoService').to(TodoService)
 }
