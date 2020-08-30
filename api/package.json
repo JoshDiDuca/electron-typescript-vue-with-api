@@ -1,12 +1,12 @@
 {
-  "name": "node-trader",
+  "name": "application-api",
   "version": "0.0.1",
   "description": "",
   "license": "MIT",
   "readmeFilename": "README.md",
   "scripts": {
     "start": "tsc && ts-node -r tsconfig-paths/register src/index.ts",
-    "build": "tsc && node -r tsconfig-paths/register bin/index.js",
+    "build": "tsc && node -r tsconfig-paths/register bin/index.ts",
     "lint": "eslint . --ext .ts"
   },
   "devDependencies": {
@@ -44,45 +44,6 @@
     "mongodb": "^3.5.1",
     "ts-node-dev": "^1.0.0-pre.44",
     "typeorm": "^0.2.22"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:@typescript-eslint/recommended",
-      "prettier"
-    ],
-    "rules": {
-      "no-console": "warn",
-      "prefer-const": "warn",
-      "@typescript-eslint/type-annontation-spacing": "off",
-      "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/interface-name-prefix": "off",
-      "@typescript-eslint/camelcase": "off",
-      "@typescript-eslint/no-namespace": "off",
-      "@typescript-eslint/consistent-type-assertions": "off",
-      "@typescript-eslint/member-delimiter-style": "off",
-      "@typescript-eslint/explicit-function-return-type": "off"
-    },
-    "settings": {
-      "import/parsers": {
-        "@typescript-eslint/parser": [
-          ".ts"
-        ]
-      },
-      "import/resolver": {
-        "typescript": {}
-      }
-    },
-    "plugins": [
-      "@typescript-eslint",
-      "prettier"
-    ],
-    "parserOptions": {
-      "parser": "@typescript-eslint/parser"
-    }
   },
   "prettier": {
     "trailingComma": "none",
