@@ -3,7 +3,7 @@ import { BaseService } from '../base/BaseService'
 import config from 'lib/AppConfig'
 import { getManager } from 'typeorm'
 import { LogService } from 'services/log/LogService'
-import { ToDo } from '../../entity/todo/ToDo';
+import { Todo } from '../../entity/todo/Todo';
 
 export interface ITodoService {
 	getValues(): Promise<Array<any>>;
@@ -23,9 +23,9 @@ export class TodoService extends BaseService
 	}
 
 	public async getValues() {
-		const marketRepository = getManager().getRepository(ToDo)
-		var newItem: ToDo = { Name : 'Test', Description : 'Description', Time : new Date()  };
-		marketRepository.save(newItem);
+		const marketRepository = getManager().getRepository(Todo)
+		var newItem: Todo = { Name : 'Test', Description : 'Description', Time : new Date()  };
+		marketRepository.create(newItem);
 		return [];
 	}
 }

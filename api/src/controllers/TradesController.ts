@@ -7,7 +7,7 @@ import {
 } from 'inversify-express-utils'
 import { TodoService } from 'services/todo/TodoService'
 
-@controller('/trades')
+@controller('/todo')
 export class TradesController extends BaseHttpController
 	implements interfaces.Controller {
 	constructor(
